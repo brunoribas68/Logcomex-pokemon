@@ -25,5 +25,7 @@ class PokemonControllerTest extends TestCase
         $response = $this->get('/pokemon/'.$pokemonName);
 
         $response->assertStatus(200);
+        self::assertTrue($response[0]['name'] === 'bulbasaur');
+
     }
 }
