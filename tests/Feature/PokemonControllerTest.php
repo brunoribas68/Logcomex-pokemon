@@ -13,8 +13,7 @@ class PokemonControllerTest extends TestCase
         $response = $this->get('/pokemons');
 
         $response->assertStatus(200);
-        $response->assertJson(fn (AssertableJson $json) =>
-            $json->where('name', "bulbasaur"));
+        self::assertTrue($response[0]['name'] === 'bulbasaur');
     }
 
 
