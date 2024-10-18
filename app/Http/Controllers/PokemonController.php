@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Http;
-use Illuminate\Http\Request;
 
 class PokemonController extends Controller
 {
