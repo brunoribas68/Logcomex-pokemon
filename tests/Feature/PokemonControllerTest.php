@@ -11,7 +11,7 @@ class PokemonControllerTest extends TestCase
     public function test_should_receive_an_list_of_pokemon(): void
     {
         $response = $this->get('/pokemons');
-        dd($reponse);
+        dd($response);
         $response->assertStatus(200);
         self::assertTrue($response[0]['name'] === 'bulbasaur');
     }
