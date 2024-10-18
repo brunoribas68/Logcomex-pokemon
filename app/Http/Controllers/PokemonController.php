@@ -45,6 +45,7 @@ class PokemonController extends Controller
 
             return response(json_encode([$pokemon]), 200);
         }catch (Exception $e ) {
+            dd($e);
             return response("Erro: Erro ao pegar lista de pokemons", 500);
         }
     }
